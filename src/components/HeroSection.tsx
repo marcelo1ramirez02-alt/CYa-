@@ -27,7 +27,7 @@ const HeroSection = () => {
             </div>
 
             {/* Search bar overlapping bottom of image */}
-            <div className="absolute -bottom-6 left-4 right-4 md:left-8 md:right-8 z-20">
+            <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-3xl z-20">
               <div className="bg-background/95 backdrop-blur-md rounded-2xl p-2.5 md:p-3 shadow-xl border border-border/50">
                 <div className="flex items-center gap-1 md:gap-2">
                   <SearchField icon={<MapPin size={14} />} label="Ciudad o distrito" value="Lima, Perú" />
