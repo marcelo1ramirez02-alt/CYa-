@@ -10,24 +10,27 @@ const HeroSection = () => {
           Reserva campos deportivos en segundos
         </p>
 
-        {/* Massive overlapping title */}
+        {/* Title IN FRONT of image */}
         <div className="relative text-center">
-          <h1 className="text-[4rem] md:text-[7rem] lg:text-[9rem] font-extrabold tracking-tighter leading-[0.85] animate-fade-up" style={{ animationDelay: "0.1s" }}>
-            cancha ya!
-          </h1>
-
-          {/* Hero image overlapping into the title */}
-          <div className="relative -mt-6 md:-mt-12 max-w-3xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          {/* Full-width hero image */}
+          <div className="relative w-full animate-fade-up" style={{ animationDelay: "0.1s" }}>
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <img
                 src={heroImg}
                 alt="Cancha de fútbol 7 iluminada de noche"
-                className="w-full h-[240px] md:h-[380px] object-cover"
+                className="w-full h-[280px] md:h-[420px] lg:h-[500px] object-cover"
               />
+              {/* Dark overlay for text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/10 rounded-3xl" />
             </div>
 
+            {/* Title overlaid on image */}
+            <h1 className="absolute inset-0 flex items-center justify-center text-[4rem] md:text-[7rem] lg:text-[9rem] font-extrabold tracking-tighter leading-[0.85] text-white z-10 drop-shadow-2xl">
+              cancha ya!
+            </h1>
+
             {/* Search bar overlapping bottom of image */}
-            <div className="absolute -bottom-6 left-4 right-4 md:left-8 md:right-8">
+            <div className="absolute -bottom-6 left-4 right-4 md:left-8 md:right-8 z-20">
               <div className="bg-background/95 backdrop-blur-md rounded-2xl p-2.5 md:p-3 shadow-xl border border-border/50">
                 <div className="flex items-center gap-1 md:gap-2">
                   <SearchField icon={<MapPin size={14} />} label="Ciudad o distrito" value="Lima, Perú" />
