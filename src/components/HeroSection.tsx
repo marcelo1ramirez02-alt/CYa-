@@ -12,12 +12,12 @@ const HeroSection = () => {
 
         {/* Title in normal flow, but in front of image via z-index */}
         <div className="relative text-center">
-          <h1 className="relative z-10 text-[4rem] md:text-[7rem] lg:text-[9rem] font-extrabold tracking-tighter leading-[0.85] text-foreground animate-fade-up" style={{ animationDelay: "0.1s" }}>
+          <h1 className="relative z-10 text-[4rem] md:text-[7rem] lg:text-[9rem] font-extrabold tracking-tighter leading-none mb-0 text-foreground animate-fade-up" style={{ animationDelay: "0.1s" }}>
             cancha ya!
           </h1>
 
-          {/* Hero image overlapping up into the title */}
-          <div className="relative -mt-6 md:-mt-12 w-full animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          {/* Hero image flush against bottom of title */}
+          <div className="relative w-full animate-fade-up" style={{ animationDelay: "0.2s" }}>
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <img
                 src={heroImg}
