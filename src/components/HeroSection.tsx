@@ -10,24 +10,21 @@ const HeroSection = () => {
           Reserva campos deportivos en segundos
         </p>
 
-        {/* Title IN FRONT of image */}
+        {/* Title in normal flow, but in front of image via z-index */}
         <div className="relative text-center">
-          {/* Full-width hero image */}
-          <div className="relative w-full animate-fade-up" style={{ animationDelay: "0.1s" }}>
+          <h1 className="relative z-10 text-[4rem] md:text-[7rem] lg:text-[9rem] font-extrabold tracking-tighter leading-[0.85] text-foreground animate-fade-up" style={{ animationDelay: "0.1s" }}>
+            cancha ya!
+          </h1>
+
+          {/* Hero image overlapping up into the title */}
+          <div className="relative -mt-6 md:-mt-12 w-full animate-fade-up" style={{ animationDelay: "0.2s" }}>
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <img
                 src={heroImg}
                 alt="Cancha de fútbol 7 iluminada de noche"
                 className="w-full h-[280px] md:h-[420px] lg:h-[500px] object-cover"
               />
-              {/* Dark overlay for text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/10 rounded-3xl" />
             </div>
-
-            {/* Title overlaid on image */}
-            <h1 className="absolute inset-0 flex items-center justify-center text-[4rem] md:text-[7rem] lg:text-[9rem] font-extrabold tracking-tighter leading-[0.85] text-white z-10 drop-shadow-2xl">
-              cancha ya!
-            </h1>
 
             {/* Search bar overlapping bottom of image */}
             <div className="absolute -bottom-6 left-4 right-4 md:left-8 md:right-8 z-20">
